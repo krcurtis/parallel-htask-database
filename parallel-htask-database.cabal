@@ -1,0 +1,98 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b7662f1147c8539291674da70d6ad382ee5e46f4745bb5c25737d94e1f4f492c
+
+name:           parallel-htask-database
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/parallel-htask-database#readme>
+homepage:       https://github.com/githubuser/parallel-htask-database#readme
+bug-reports:    https://github.com/githubuser/parallel-htask-database/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/parallel-htask-database
+
+library
+  exposed-modules:
+      Lib
+      LightweightWorker
+  other-modules:
+      Paths_parallel_htask_database
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bson
+    , bytestring
+    , mongoDB
+    , mtl
+    , network
+    , process
+    , random
+    , text
+    , time
+    , unix
+    , uuid
+  default-language: Haskell2010
+
+executable parallel-htask-database-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_parallel_htask_database
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bson
+    , bytestring
+    , mongoDB
+    , mtl
+    , network
+    , parallel-htask-database
+    , process
+    , random
+    , text
+    , time
+    , unix
+    , uuid
+  default-language: Haskell2010
+
+test-suite parallel-htask-database-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_parallel_htask_database
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bson
+    , bytestring
+    , mongoDB
+    , mtl
+    , network
+    , parallel-htask-database
+    , process
+    , random
+    , text
+    , time
+    , unix
+    , uuid
+  default-language: Haskell2010
